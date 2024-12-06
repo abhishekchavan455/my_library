@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .card {
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 10px;
+    margin-left:570px;
+  margin-top: 300px;
+}
+
+.card-header {
+  background-color: #333;
+  padding: 16px;
+  text-align: center;
+}
+
+.card-header .text-header {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.form-group input 
+{
+  width: 95%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: #333;
+}
+
+
+body
+{
+background:url("book14.jpg");
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+}
+        </style>
+    </head>
+    <body>
+        <div class="card">
+  <div class="card-header">
+    <div class="text-header">Delete Book</div>
+  </div>
+  <div class="card-body" style="background-color:white;">
+    <form action="delete_book.jsp">
+      
+        <div class="form-group">
+        <label>Book Name:</label>
+        <input type="text" class="form-control" name="n1" >
+      </div>
+        
+     <input type="submit" class="btn" value="submit">
+    </form>
+  </div>
+</div>
+
+    </body>
+</html>

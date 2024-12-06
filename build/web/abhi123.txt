@@ -1,0 +1,108 @@
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Wed Feb 28 20:20:12 2024
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+SQL> connect system/system
+Connected.
+SQL> set linesize 300;
+SQL> set pagesize 40;
+SQL> select * from addbooks;
+
+   BOOKUID BNAME                     PRICE        QTY PUBLISHER            SNAME                        SC ADDRESS
+---------- -------------------- ---------- ---------- -------------------- -------------------- ---------- --------------------
+       121 beloved                     982          5 phadake              omraj                  99889988 pune
+       120 ramayan                    1023          6 mumbai               atharv                 11223344 rankala
+       140 secrate book                278         10 phadake              ramesh                 55667788 shahupuri
+       160 ramayan                     680          1 ramanuj              mumbai                 55667788 juhu beach
+
+SQL> select * from addemp1;
+
+       EID FNAME           LNAME                  ADH        MOB ADDRESS         DOB       USERNAME        PASSWORD        EMAIL
+---------- --------------- --------------- ---------- ---------- --------------- --------- --------------- --------------- ---------------
+       121                                     887766                            31-DEC-03
+       122 vaishnavi       chavan             5566778    7766554 kolhapur        27-SEP-98 vaishanavi      v123@           v345
+       104 radha           dangare           44556677   66774455 kolhapur        15-MAR-12 radha           r123            r123@
+       123 nirmala         av                  112233     889966 rajarampuri     31-DEC-03 abhiiii         abhishek        abhi123
+       124 va              av                  112233     889966 rajarampuri     31-DEC-03 abhiiii         abhishek        abhi123
+       125 va              av                  112233     889966 rajarampuri     31-DEC-03 abhiiii         abhishek        abhi123
+       141 shweta          chavan              455663     445566 shahupuri       31-DEC-03 shweta          shweta123       s123@
+       163 yash            divate              123243    9988776 mahadik         31-DEC-03 yash            yash123         yash@12
+      1000 pradip          kumbhar           11223344    9988776 bagal chwok     31-DEC-03 pradip          pradipk@123     pradipk@12
+       181 abhishek        chavan            11223344  998877634 bagal chwok     31-DEC-03 abhi            ab1234          pradipk@12
+
+10 rows selected.
+
+SQL> select * from sup;
+
+     SUPID SNAME                SCONT ADDRESS
+---------- --------------- ---------- ---------------
+       221 vaishnavi            12345 xyz
+
+SQL> select * from student77;
+
+      LBID FNAME           LNAME           DOB       ADDRESS         CADDRESS            DEPTNO BRANCH                YEAR      AYEAR      MOBNO GE USERNAM    PASSWORD
+---------- --------------- --------------- --------- --------------- --------------- ---------- --------------- ---------- ---------- ---------- -- --------------- ---------------
+      1000 abhishek        chavan          27-JAN-03 bagal chwok     rajarampuri           1123 bca                   2019       2021     998877 m  abhi786
+      1001 vaishnavi       dangare         31-DEC-02 bagal chwok     rajarampuri         445566 bca                   2019       2023     123456 f  vaishh     vaishu123
+      1003 nirmala         chavan          21-JAN-19 shahupuri       shahupuri             5566 bba                   2018       2019     445566 m  nirmala    n123
+
+SQL> select * from transuction1;
+
+       TID      STDID STDNAME             BOOKID BOOKNAME        IDATE     RDATE         BPRICE PUB
+---------- ---------- --------------- ---------- --------------- --------- --------- ---------- ---------------
+         1       1990 abhis                 1899 shyamchi aai    31-MAY-18 15-JUN-18       1267 ravals
+        21       1001 vaishnavi              101 agnipakh        15-JAN-22 20-JAN-22        300 abc
+
+SQL> desc addbooks;
+ Name
+     Null?      Type
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------- --------------------------------------------------------------------------------------------------------------------
+ BOOKUID                                                                                                                                                                 NUMBER(6)
+ BNAME                                                                                                                                                                   VARCHAR2(20)
+ PRICE                                                                                                                                                                   NUMBER(5)
+ QTY                                                                                                                                                                     NUMBER(5)
+ PUBLISHER                                                                                                                                                               VARCHAR2(20)
+ SNAME                                                                                                                                                                   VARCHAR2(20)
+ SC                                                                                                                                                                      NUMBER(10)
+ ADDRESS                                                                                                                                                                 VARCHAR2(20)
+
+SQL> desc addemp1;
+ Name                                                                                                                                                                          Null?    Type ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------- --------------------------------------------------------------------------------------------------------------------
+ EID                                                                                                                                                                                    NUMBER(5)
+ FNAME                                                                                                                                                                                  VARCHAR2(15)
+ LNAME                                                                                                                                                                                  VARCHAR2(15)
+ ADH                                                                                                                                                                                    NUMBER(8)
+ MOB                                                                                                                                                                                    NUMBER(10)
+ ADDRESS                                                                                                                                                                                VARCHAR2(15)
+ DOB                                                                                                                                                                                    DATE USERNAME                                                                                                                                                                               VARCHAR2(15)
+ PASSWORD                                                                                                                                                                               VARCHAR2(15)
+ EMAIL                                                                                                                                                                                  VARCHAR2(15)
+
+SQL> desc transuction1;
+ Name                                                                                                                                                                          Null?    Type
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------- --------------------------------------------------------------------------------------------------------------------
+ TID                                                                                                                                                                                    NUMBER(5)
+ STDID                                                                                                                                                                                  NUMBER(5)
+ STDNAME                                                                                                                                                                                VARCHAR2(15)
+ BOOKID                                                                                                                                                                                 NUMBER(5)
+ BOOKNAME                                                                                                                                                                               VARCHAR2(15)
+ IDATE                                                                                                                                                                                  DATE
+ RDATE                                                                                                                                                                                  DATE
+ BPRICE                                                                                                                                                                                 NUMBER(5)
+ PUB                                                                                                                                                                                    VARCHAR2(15)
+
+SQL> desc transuction1;
+ Name                                                                                                                                                                          Null?    Type
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------- --------------------------------------------------------------------------------------------------------------------
+ TID                                                                                                                                                                                    NUMBER(5)
+ STDID                                                                                                                                                                                  NUMBER(5)
+ STDNAME                                                                                                                                                                                VARCHAR2(15)
+ BOOKID                                                                                                                                                                                 NUMBER(5)
+ BOOKNAME                                                                                                                                                                               VARCHAR2(15)
+ IDATE                                                                                                                                                                                  DATE
+ RDATE                                                                                                                                                                                  DATE
+ BPRICE                                                                                                                                                                                 NUMBER(5)
+ PUB                                                                                                                                                                                    VARCHAR2(15)
+
+SQL>
