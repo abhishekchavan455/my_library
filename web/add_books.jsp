@@ -35,5 +35,10 @@
         out.println("Book Added");
         }
         %>
+        <a href="admin_main_page.html" style="text-decoration: none;">
+        <button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Back to Home
+        </button>
+        </a>
     </body>
 </html>
