@@ -16,14 +16,18 @@
     </head>
     <body>
         <%
-        String bookid=request.getParameter("n1");
+        String studentid=request.getParameter("n1");
+        int stdid=Integer.parseInt(studentid);
+        String bookid=request.getParameter("n2");
         int bid=Integer.parseInt(bookid);
-        String bprice=request.getParameter("n2");
-        int price=Integer.parseInt(bprice);
+        String bname=request.getParameter("n3");
+        String idate=request.getParameter("n4");
+        String rdate=request.getParameter("n3");
+  
         Class.forName("oracle.jdbc.driver.OracleDriver");
         Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
         Statement stmt=con.createStatement();
-        int result=stmt.executeUpdate("update book1 set PRICE="+price+" where BID="+bid+"");
+        int result=stmt.executeUpdate("update addbooks set rdate="+rdate+" where stdid="+stdid+"");
         if(result>0)
         {
         out.println("one record updated");
