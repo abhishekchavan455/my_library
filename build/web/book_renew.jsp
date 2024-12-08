@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>book renew</title>
 <style>
 .form {
   max-width: 320px;
@@ -114,19 +114,19 @@ background-size:cover;
     <span class="title"></span>
     
     <label class="label">Student Id </label>
-    <input type="text" name="n1" value='<%=rs.getString(2)%>'>
+    <input type="text" name="n1" value='<%=rs.getString(2)%>' class="input">
     
     <label class="label">Book Id </label>
-    <input type="text" name="n2" value='<%=rs.getString(4)%>'>
+    <input type="text" name="n2"  value='<%=rs.getString(4)%>' class="input">
     
     <label class="label">Book Name</label>
-    <input type="text" name="n4" value='<%=rs.getString(5)%>'>
+    <input type="text" name="n4"  value='<%=rs.getString(5)%>' class="input">
     
     <label class="label">Book Issue Date</label>
-    <input type="text" name="n5" value='<%=rs.getString(6)%>'>
+    <input type="text"  readonly value='<%=rs.getString(6)%>' class="input">
     
     <label class="label">Book Return Date</label>
-    <input type="text" name="n6" value='<%=rs.getString(7)%>'>
+    <input type="text" name="n6" value='<%=rs.getString(7)%>' class="input">
     
     <input type="submit" value="submit" class="form-submit-btn">
     <input type="reset" class="form-submit-btn">

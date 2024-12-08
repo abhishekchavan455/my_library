@@ -12,22 +12,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>book renew</title>
     </head>
     <body>
         <%
         String studentid=request.getParameter("n1");
         int stdid=Integer.parseInt(studentid);
-        String bookid=request.getParameter("n2");
-        int bid=Integer.parseInt(bookid);
-        String bname=request.getParameter("n3");
-        String idate=request.getParameter("n4");
-        String rdate=request.getParameter("n3");
+        String rdate=request.getParameter("n6");
   
         Class.forName("oracle.jdbc.driver.OracleDriver");
         Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
         Statement stmt=con.createStatement();
-        int result=stmt.executeUpdate("update addbooks set rdate="+rdate+" where stdid="+stdid+"");
+        int result=stmt.executeUpdate("update transuction1 set rdate='"+rdate+"' where stdid="+stdid+"");
         if(result>0)
         {
         out.println("one record updated");
